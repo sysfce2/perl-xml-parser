@@ -2,7 +2,6 @@ Changes				Change log
 Expat/encoding.h		Header file; describes *.enc structure
 Expat/Expat.pm			XML::Parser::Expat module
 Expat/Expat.xs			Extension library
-Expat/Makefile
 Expat/Makefile.PL		perl MakeMaker script for XML::Parser::Expat
 Expat/typemap			XS typemap
 inc/Devel/CheckLib.pm
