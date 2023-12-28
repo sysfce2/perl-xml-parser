@@ -30,7 +30,7 @@ foreach (@ARGV) {
 
 unless (
     check_lib(    # fill in what you prompted the user for here
-        lib     => [qw(expat)],
+        lib     => [$^O eq 'MSWin32' ? qw(libexpat) : qw(expat)],
         header  => ['expat.h'],
         incpath => $expat_incpath,
         ( $expat_libpath ? ( libpath => $expat_libpath ) : () ),
