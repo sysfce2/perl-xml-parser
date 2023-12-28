@@ -25,15 +25,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - name: Set up Perl
-        run: |
-          choco install strawberryperl
-          echo "C:\strawberry\c\bin"         >> $GITHUB_PATH
-          echo "C:\strawberry\perl\site\bin" >> $GITHUB_PATH
-          echo "C:\strawberry\perl\bin"      >> $GITHUB_PATH
       - name: perl -V
         run: perl -V
       - name: Makefile.PL
-        run: perl Makefile.PL
+        run: perl Makefile.PL EXPATLIBPATH="C:\strawberry\c\lib" EXPATINCPATH="C:\strawberry\c\include"
+      - name: make
+        run: make
       - name: make test
         run: make test
