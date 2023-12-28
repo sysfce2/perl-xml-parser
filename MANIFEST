@@ -5,6 +5,7 @@ Expat/Expat.xs			Extension library
 Expat/Makefile.PL		perl MakeMaker script for XML::Parser::Expat
 Expat/typemap			XS typemap
 inc/Devel/CheckLib.pm
+LICENSE
 Makefile.PL			perl MakeMaker script for XML::Parser
 MANIFEST			This file
 MANIFEST.SKIP
