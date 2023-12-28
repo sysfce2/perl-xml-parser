@@ -12,6 +12,7 @@ Build.bat
 *.tmp
 *.orig
 *.rej
+*.bak
 META.*
 MYMETA.*
 Expat/MYMETA.*
