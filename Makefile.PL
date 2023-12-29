@@ -1,6 +1,6 @@
 use 5.004005;    #Devel::CheckLib
 use ExtUtils::MakeMaker;
-use lib qw(inc);
+use lib './inc';
 use Devel::CheckLib;
 
 use Config;

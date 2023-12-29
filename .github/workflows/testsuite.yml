@@ -108,3 +108,31 @@ jobs:
         run: perl Makefile.PL
       - run: make
       - run: make test
+
+# ------------------------------------------------------------------------
+
+  windows:
+    runs-on: windows-latest
+    needs: [ubuntu]
+
+    env:
+      PERL_USE_UNSAFE_INC: 0
+      AUTHOR_TESTING: 0
+      AUTOMATED_TESTING: 1
+      RELEASE_TESTING: 0
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Set PATH for Strawberry Perl
+        uses: egor-tensin/cleanup-path@v3
+        with:
+          dirs: 'C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin'
+          default: 1
+      - name: perl -V
+        run: perl -V
+      - name: Makefile.PL
+        run: perl Makefile.PL EXPATLIBPATH="C:\strawberry\c\lib" EXPATINCPATH="C:\strawberry\c\include"
+      - name: make
+        run: gmake
+      - name: make test
+        run: gmake test
