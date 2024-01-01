@@ -12,6 +12,7 @@ Build.bat
 *.tmp
 *.orig
 *.rej
+*.bak
 META.*
 MYMETA.*
 Expat/MYMETA.*
@@ -21,3 +22,4 @@ Expat/Expat.o
 Expat/dll.base
 Expat/dll.exp
 Expat/Expat.def
+Expat/Makefile

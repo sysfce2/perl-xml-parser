@@ -8,3 +8,4 @@ cpanfile
 /MYMETA
 ^Makefile$
 \.github/
+^Expat/Makefile$
